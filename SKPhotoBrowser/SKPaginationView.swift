@@ -8,7 +8,11 @@
 
 import UIKit
 
+#if SWIFT_PACKAGE
+private let bundle = Bundle.module
+#else
 private let bundle = Bundle(for: SKPhotoBrowser.self)
+#endif
 
 class SKPaginationView: UIView {
     var counterLabel: UILabel?
